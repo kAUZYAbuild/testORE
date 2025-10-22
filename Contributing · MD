@@ -1,0 +1,161 @@
+Thank you for your interest in contributing to TestORE! 🎉
+🤝 How to Contribute
+Reporting Bugs
+Found a bug? Please report it!
+
+Check existing issues first
+Create a new issue with:
+
+Clear title
+Description of the problem
+Steps to reproduce
+Expected vs actual behavior
+Your environment (OS, Rust version, etc.)
+Error messages/logs
+
+
+
+Suggesting Features
+Have an idea? We'd love to hear it!
+
+Check if it's already suggested
+Create an issue with:
+
+Feature description
+Use case/motivation
+Proposed implementation (optional)
+
+
+
+Pull Requests
+Setup
+bash# Fork and clone
+git clone https://github.com/YOUR_USERNAME/testore.git
+cd testore
+
+# Create branch
+git checkout -b feature/your-feature-name
+
+# Make changes
+# ...
+
+# Test
+cargo test
+cargo clippy
+cargo fmt --check
+
+# Commit
+git commit -m "feat: your feature description"
+
+# Push
+git push origin feature/your-feature-name
+Guidelines
+
+Code Style: Follow Rust conventions, run cargo fmt
+Tests: Add tests for new features
+Documentation: Update README/docs as needed
+Commit Messages: Use conventional commits format
+
+feat: new feature
+fix: bug fix
+docs: documentation
+test: tests
+chore: maintenance
+
+
+
+Review Process
+
+Submit PR with clear description
+Maintainers will review
+Address feedback
+Get approval
+Merge! 🎉
+
+🔧 Development
+Building
+bashcargo build --release
+Testing
+bash# Run all tests
+cargo test
+
+# Run specific test
+cargo test test_name
+
+# Run with output
+cargo test -- --nocapture
+Linting
+bash# Check code
+cargo clippy
+
+# Format code
+cargo fmt
+Local Testing
+bash# Start local validator
+solana-test-validator
+
+# Deploy locally
+anchor deploy --provider.cluster localnet
+
+# Test CLI
+./target/release/testore --rpc http://localhost:8899 mine
+📋 Project Structure
+testore/
+├── programs/
+│   └── testore-program/  # Anchor smart contract
+│       ├── src/
+│       │   └── lib.rs     # Main program logic
+│       └── Cargo.toml
+├── cli/
+│   ├── src/
+│   │   ├── main.rs        # CLI entry point
+│   │   ├── miner.rs       # Mining engine
+│   │   ├── proof.rs       # PoW logic
+│   │   └── leaderboard.rs # Stats fetching
+│   └── Cargo.toml
+├── bridge/
+│   ├── src/
+│   │   └── main.rs        # Airdrop bridge
+│   └── Cargo.toml
+├── tests/
+│   └── integration_test.rs
+└── web/
+    └── index.html         # Browser miner
+🎯 Good First Issues
+Looking for something to work on?
+
+Add GPU mining support
+Improve error messages
+Add more tests
+Optimize mining algorithm
+Improve documentation
+Add metrics/monitoring
+Create Discord bot
+
+Check issues labeled good-first-issue.
+🚀 Release Process
+(For maintainers)
+
+Update version in Cargo.toml
+Update CHANGELOG.md
+Create git tag: git tag v0.x.0
+Push: git push origin v0.x.0
+GitHub Actions will build and release
+
+📝 Code of Conduct
+Our Pledge
+We pledge to make participation a harassment-free experience for everyone.
+Standards
+✅ Do:
+
+Be respectful
+Welcome newcomers
+Give constructive feedback
+Accept criticism gracefully
+
+❌ Don't:
+
+Harass or insult
+Post inappropriate content
+Share private information
+Act unprofessionally
